@@ -1,0 +1,52 @@
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+
+
+
+public class FXMLDocumentController implements Initializable {
+    
+    @FXML
+    private Label sum;
+
+    @FXML
+    private TextField T1;
+
+    @FXML
+    private TextField T2;
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) {
+        
+        int x = Integer.parseInt(T1.getText());
+
+        int y = Integer.parseInt(T2.getText());
+
+        sum.setText(String.valueOf(x+y));
+
+    }
+    
+    @FXML
+    private void handleClearButtonAction(ActionEvent event) {
+
+        T1.clear();
+
+        T2.clear();
+
+        sum.setText("");
+
+    }
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+
+
+       
+    }    
+    
+}
+
